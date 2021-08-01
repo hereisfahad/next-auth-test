@@ -49,10 +49,10 @@ export default NextAuth({
       },
     }),
     */
-    // Providers.Facebook({
-    //   clientId: process.env.FACEBOOK_ID,
-    //   clientSecret: process.env.FACEBOOK_SECRET,
-    // }),
+    Providers.Facebook({
+      clientId: process.env.FACEBOOK_ID,
+      clientSecret: process.env.FACEBOOK_SECRET,
+    }),
     Providers.GitHub({
       clientId: process.env.GITHUB_ID,
       clientSecret: process.env.GITHUB_SECRET,
@@ -132,11 +132,10 @@ export default NextAuth({
   // when an action is performed.
   // https://next-auth.js.org/configuration/callbacks
   callbacks: {
-    redirect: async (url, baseUrl) => {
-        return url.startsWith(baseUrl)
-            ? Promise.resolve(url)
-            : Promise.resolve(baseUrl)
-    }
+    // async signIn(user, account, profile) { return true },
+    // async redirect(url, baseUrl) { return baseUrl },
+    // async session(session, user) { return session },
+    // async jwt(token, user, account, profile, isNewUser) { return token }
   },
 
   // Events are useful for logging
