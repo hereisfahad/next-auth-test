@@ -22,7 +22,9 @@ export default function Header () {
                 className={styles.buttonPrimary}
                 onClick={(e) => {
                   e.preventDefault()
-                  signIn()
+                  signIn(null, {
+                    callbackUrl: process.env.NEXTAUTH_URL,
+                  })
                 }}
               >
                 Sign in
