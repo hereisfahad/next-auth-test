@@ -63,10 +63,10 @@ export default NextAuth({
     //   clientId: process.env.GOOGLE_ID,
     //   clientSecret: process.env.GOOGLE_SECRET,
     // }),
-    // Providers.Twitter({
-    //   clientId: process.env.TWITTER_ID,
-    //   clientSecret: process.env.TWITTER_SECRET,
-    // }),
+    Providers.Twitter({
+      clientId: process.env.TWITTER_ID,
+      clientSecret: process.env.TWITTER_SECRET,
+    }),
     // Providers.Auth0({
     //   clientId: process.env.AUTH0_ID,
     //   clientSecret: process.env.AUTH0_SECRET,
