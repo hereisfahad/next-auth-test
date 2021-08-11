@@ -22,7 +22,7 @@ export default function Page () {
 
   // If no session exists, display access denied message
   if (!session) { return  <Layout><AccessDenied/></Layout> }
-
+  console.log(session)
   // If session exists, display content
   return (
     <Layout>
